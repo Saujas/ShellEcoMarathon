@@ -13,9 +13,14 @@ django 2.0
 ```shell
 sudo pip3 install django==2.0
 ```
+
+
+Download repo and extract from zipped file
+
+
 To run server:
 ```shell
-cd ShellEcoMarathon-master/ShellEcoFinal/ShellEco
+cd ShellEcoMarathon-master/ShellEcoMarathon-master/ShellEco
 
 python3 manage.py runserver
 ```
