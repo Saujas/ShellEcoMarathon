@@ -1,0 +1,181 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shell Eco Marathon</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$(".link1").mouseover(function()
+			{
+				$(".line").css("left","61.2vw");
+				$(".line").css("width","2.5vw");
+			});
+			$(".link2").mouseover(function()
+			{
+				$(".line").css("left","65vw");
+				$(".line").css("width","4vw");
+			});
+			$(".link3").mouseover(function()
+			{
+				$(".line").css("left","70vw");
+				$(".line").css("width","5vw");
+			});
+			$(".link4").hover(function()
+			{
+				$(".line").css("left","76.5vw");
+				$(".line").css("width","4.5vw");
+			});
+			$(".link5").hover(function()
+			{
+				$(".line").css("left","82.2vw");
+				$(".line").css("width","7vw");
+			});
+			$(".link6").hover(function()
+			{
+				$(".line").css("left","90.7vw");
+				$(".line").css("width","4.5vw");
+			});
+		});
+
+		$(document).on("click",".position", function()
+        {
+            var smallimage = $(this).find("img").attr("src");
+            console.log(smallimage);
+            $(".block").fadeIn(1000);
+            $(".imageHolder img").attr("src",smallimage);
+        });
+
+	</script>
+	<link rel="stylesheet" type="text/css" href="{% static 'pages/teamEcoTitans.css' %}" />
+</head>
+<body>
+
+	<div class="loaderScreen">
+		<div class="loader">
+			<div class="dot"></div>
+		</div>
+	</div>
+
+	<div class="head">
+		<img src="{% static 'ShellEcoImages/logo.png' %}" />
+		<a href="/" class="link1">HOME</a>
+		<a href="/about/" class="link2">ABOUT</a>
+		<a href="/efficiency/" class="link3">OUR CARS</a>
+		<a href="/team/" class="link4">THE TEAM</a>
+		<a href="/sponsors/" class="link5">PARTNERSHIPS</a>
+		<a href="{% static 'ShellEcoImages/sponsershipPackage.pdf' %}" class="link6" />MAGAZINE</a>
+		<span class="span" style="cursor:pointer" onclick="openNav()">&#9776;</span>
+		<div class="line"></div>
+	</div>
+
+	<div id="mySidenav" class="sidenav">
+		<a class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="">Home</a>
+		<a href="/about/">About</a>
+		<a href="/efficiency/">Our Cars</a>
+		<a href="/team/">The Team</a>
+		<a href="/sponsors/">Partnerships</a>
+		<a href="{% static 'ShellEcoImages/sponsershipPackage.pdf' %}" />Magazine</a>
+	</div>
+
+	<div class="image">
+		<img src="{% static 'ShellEcoImages/72.jpg' %}" />
+	</div>
+
+	<div class="text">
+		<h1>TEAM BITS</h1>
+		<p>Efficiency is the moto not speed</p>
+	</div>
+
+	<h1 class="gallery">GALLERY</h1>
+
+	<div class="progress">
+		<div id="pic1" class="position">
+			<img src="{% static 'ShellEcoImages/70.jpg' %}" />
+		</div>
+		<div id="pic2" class="position">
+			<img src="{% static 'ShellEcoImages/71.png' %}" />
+		</div>
+		<div id="pic3" class="position">
+			<img src="{% static 'ShellEcoImages/73.png' %}" />
+		</div>
+		<div id="pic4" class="position">
+			<img src="{% static 'ShellEcoImages/74.png' %}" />
+		</div>
+		<div id="pic5" class="position">
+			<img src="{% static 'ShellEcoImages/78.jpg' %}" />
+		</div>
+		<div id="pic6" class="position">
+			<img src="{% static 'ShellEcoImages/logo.png' %}" />
+		</div>
+	</div>
+
+	<div class="block">
+		<div class="imageHolder">
+			<span class="close">&times;</span>
+			<img src="{% static 'ShellEcoImages/70.jpg' %}" />
+		</div>
+	</div>
+
+	<div class="contactDetails">
+		<h1>GET IN TOUCH</h1>
+                <form action="/" method="post"> {% csrf_token %}
+                    <input name="{{ form.name.name }}" class="name" type="text" placeholder="Enter your name"><br>
+		    <input name="{{ form.email.name }}" class="email" type="email" placeholder="Enter your email"><br>
+		    <input name="{{ form.number.name }}" class="number" type="number" placeholder="Enter your phone no."><br>
+                    <input type="submit" name="Submit" class="submit" value="Submit" >
+                </form>
+	</div>
+
+	<div class="ourContact">
+		<p>Ph. no : +917230927230</p>
+		<p>Ph. no : +918290939833</p>
+		<p>Email: prateek9jain8@gmail.com</p>
+		<p>Email: amang390@gmail.com</p>
+	</div>
+
+	<div class="footer">
+		<div class="cover">
+			<img src="">
+			<p>We at Team BITS are designing and building a highly energy efficient prototype vehicle. Making an ultra fuel efficient vehicle with an aim to achieve zero fuel emissions and increasing the efficiency of the 100% ethanol fueled car and development of energy efficient electric vehicle is our moto.</p>
+			<hr>
+			<h1>Copyright © 2018 Team BITS. All Rights Reserved.</h1>
+			<a class="facebook" href="https://m.facebook.com/profile.php?id=228172260639135&ref=content_filter"><i class="fa fa-facebook"></i></a>
+			<a class="instagram" href="https://www.instagram.com/team_bits_shellecomarathon/"><i class="fa fa-instagram"></i></a>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		window.addEventListener("load", function()
+		{
+			var load_screen = document.getElementsByClassName("loaderScreen")[0];
+			document.body.removeChild(load_screen);
+		});
+		
+		var modal = document.getElementsByClassName('block')[0];
+		var span = document.getElementsByClassName("close")[0];
+
+		span.onclick = function() { 
+		    modal.style.display = "none";
+		}
+
+		function openNav() {
+		    document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+		    document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shell Eco Marathon</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'pages/aboutUs.css' %}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$(".link1").mouseover(function()
+			{
+				$(".line").css("left","61.2vw");
+				$(".line").css("width","2.5vw");
+			});
+			$(".link2").mouseover(function()
+			{
+				$(".line").css("left","65vw");
+				$(".line").css("width","4vw");
+			});
+			$(".link3").mouseover(function()
+			{
+				$(".line").css("left","70vw");
+				$(".line").css("width","5vw");
+			});
+			$(".link4").hover(function()
+			{
+				$(".line").css("left","76.5vw");
+				$(".line").css("width","4.5vw");
+			});
+			$(".link5").hover(function()
+			{
+				$(".line").css("left","82.2vw");
+				$(".line").css("width","7vw");
+			});
+			$(".link6").hover(function()
+			{
+				$(".line").css("left","90.7vw");
+				$(".line").css("width","4.5vw");
+			});
+		});
+	</script>
+</head>
+<body>
+
+	<div class="loaderScreen">
+		<div class="loader">
+			<div class="dot"></div>
+		</div>
+	</div>
+
+	<div class="head">
+		<img src="{% static 'ShellEcoImages/logo.png' %}" />
+		<a href="/" class="link1">HOME</a>
+		<a href="/about/" class="link2">ABOUT</a>
+		<a href="/efficiency/" class="link3">OUR CARS</a>
+		<a href="/team/" class="link4">THE TEAM</a>
+		<a href="/sponsors/" class="link5">PARTNERSHIPS</a>
+		<a href="{% static 'ShellEcoImages/sponsershipPackage.pdf' %}" class="link6" />MAGAZINE</a>
+		<span class="span" style="cursor:pointer" onclick="openNav()">&#9776;</span>
+		<div class="line"></div>
+	</div>
+
+	<div id="mySidenav" class="sidenav">
+		<a class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="/">Home</a>
+		<a href="/about/">About</a>
+		<a href="/efficiency/">Our Cars</a>
+		<a href="/team/">The Team</a>
+		<a href="/sponsors/">Partnerships</a>
+		<a href="{% static 'ShellEcoImages/sponsershipPackage.pdf' %}" />Magazine</a>
+	</div>
+
+	<div class="about">
+		<div class="blur">
+			<h1>ABOUT SHELL ECO MARATHON</h1>
+		</div>
+	</div>
+
+	<div class="description">
+		<div class="sideLeft">
+			<h1>ABOUT SHELL ECO<br>MARATHON</h1>
+			<hr>
+			<p>The competition dates back to the 1939 when Shell Oil Company employees in the USA made a friendly wager over who could travel furthest on the same amount of fuel. Since then, it has expanded to two more continents and also includes diverse energy types ranging from bio-fuels to electricity. Today, Shell Eco-marathon challenges student teams around the world to design, build, test and drive ultra-energy-efficient vehicles. It is a celebration of innovations in science and engineering come alive through contributions from the brightest minds across Asia from over 20 countries. With annual events being held in America, Europe and Asia, teams compete on a global stage to achieve the epitome of fuel efficiency. The events spark passionate debate about the future of mobility and inspires young engineers to push the boundaries of fuel efficiency.<br>The teams can choose from two categories --<br><br><strong>Prototype</strong>: Drivers squeeze into aerodynamic vehicles, lying on their backs to steer around the track<br><br><strong>Urban Concept</strong>: Cars look more familiar to modern day vehicles. Built to roadworthy specifications, their extra weight may take them less fuel-efficient than prototype cars, but they are still able to achieve impressive results to modern-day vehicles.<br><br>The teams are provided with a plethora of energy sources to choose from broadly classified in Internal Combustion engine and Electric Mobility Categories<br><strong>IC Engine</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Electric Mobility</strong><br>Petrol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Battery Electric<br>Diesel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hydrogen Fuel Cell<br>Ethanol<br>CNG</p>
+		</div>
+	</div>
+
+	<div class="backImage">
+		<img src="{% static 'ShellEcoImages/72.jpg' %}" />
+	</div>
+
+	<div class="footer">
+		<div class="cover">
+			<p>We at Team BITS are designing and building a highly energy efficient prototype vehicle. Making an ultra fuel efficient vehicle with an aim to achieve zero fuel emissions and increasing the efficiency of the 100% ethanol fueled car and development of energy efficient electric vehicle is our moto.</p>
+			<hr>
+			<h1>Copyright © 2018 Team BITS. All Rights Reserved.</h1>
+			<a class="facebook" href="https://m.facebook.com/profile.php?id=228172260639135&ref=content_filter"><i class="fa fa-facebook"></i></a>
+			<a class="instagram" href="https://www.instagram.com/team_bits_shellecomarathon/"><i class="fa fa-instagram"></i></a>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		window.addEventListener("load", function()
+		{
+			var load_screen = document.getElementsByClassName("loaderScreen")[0];
+			document.body.removeChild(load_screen);
+		});
+		
+		function openNav() {
+		    document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+		    document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+
+</body>
+</html>

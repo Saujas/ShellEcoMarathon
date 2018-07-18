@@ -1,0 +1,167 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shell Eco Marathon</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'pages/efficiency.css' %}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$(".link1").mouseover(function()
+			{
+				$(".line").css("left","61.2vw");
+				$(".line").css("width","2.5vw");
+			});
+			$(".link2").mouseover(function()
+			{
+				$(".line").css("left","65vw");
+				$(".line").css("width","4vw");
+			});
+			$(".link3").mouseover(function()
+			{
+				$(".line").css("left","70vw");
+				$(".line").css("width","5vw");
+			});
+			$(".link4").hover(function()
+			{
+				$(".line").css("left","76.5vw");
+				$(".line").css("width","4.5vw");
+			});
+			$(".link5").hover(function()
+			{
+				$(".line").css("left","82.2vw");
+				$(".line").css("width","7vw");
+			});
+			$(".link6").hover(function()
+			{
+				$(".line").css("left","90.7vw");
+				$(".line").css("width","4.5vw");
+			});
+		});
+	</script>
+</head>
+<body>
+
+	<div class="loaderScreen">
+		<div class="loader">
+			<div class="dot"></div>
+		</div>
+	</div>
+
+	<div class="head">
+		<img src="{% static 'ShellEcoImages/logo.png' %}" />
+		<a href="/" class="link1">HOME</a>
+		<a href="/about/" class="link2">ABOUT</a>
+		<a href="/efficiency/" class="link3">OUR CARS</a>
+		<a href="/team/" class="link4">THE TEAM</a>
+		<a href="/sponsors/" class="link5">PARTNERSHIPS</a>
+		<a href="{% static 'ShellEcoImages/sponsershipPackage.pdf' %}" class="link6" />MAGAZINE</a>
+		<span class="span" style="cursor:pointer" onclick="openNav()">&#9776;</span>
+		<div class="line"></div>
+	</div>
+
+	<div id="mySidenav" class="sidenav">
+		<a class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="/">Home</a>
+		<a href="/about/">About</a>
+		<a href="/efficiency/">Our Cars</a>
+		<a href="/team/">The Team</a>
+		<a href="/sponsors/">Partnerships</a>
+		<a href="{% static 'ShellEcoImages/sponsershipPackage.pdf' %}" />Magazine</a>
+	</div>
+
+	<div class="titans">
+		<div class="colorBlack">
+			<h1>TITANS OF EFFICIENCY</h1>
+		</div>
+	</div>
+
+	<div class="eklavya">
+		<h1>TITANS OF EFFICIENCY / OUR CARS</h1>
+		<h3>Eklavya (2012)</h3>
+		<ol>
+			<li>Prototype catagory</li>
+			<li>Gasoline: 70km/l</li>
+			<li>Go-kart style steering Body-Wood</li>
+			<li>Chassis: Mild steel</li>
+		</ol>
+		<img src="{% static 'ShellEcoImages/70.jpg' %}" />
+	</div>
+	<div class="vortex">
+		<h3>Vortex (2015)</h3>
+		<ol>
+			<li>Prototype category</li>
+			<li>Gasoline: 83km/l</li>
+			<li>Weight of tyres was reduced drastically</li>
+			<li>Aerodynamically more optimized</li>
+		</ol>
+		<img src="{% static 'ShellEcoImages/73.png' %}" />
+	</div>
+	<div class="myriad">
+		<h3>Myriad (2016)</h3>
+		<ol>
+			<li>Urban Concept</li>
+			<li>Gasoline: 91km/l</li>
+			<li>Carbon fiber fairing | 100CC Engine</li>
+			<li>Preservance Award</li>
+		</ol>
+		<img src="{% static 'ShellEcoImages/74.png' %}" />
+	</div>
+	<div class="tapas">
+		<h3>Tapas (2017)</h3>
+		<ol>
+			<li>Urban Concept</li>
+			<li>Ethanol E-100</li>
+			<li>Carbon Fiber Monocoque</li>
+			<li>Special Recognition Award Rs. 2 lakhs</li>
+		</ol>
+		<img src="{% static 'ShellEcoImages/71.png' %}" />
+	</div>
+
+	<div class="daksh">
+		<h3>Daksh (2018)</h3>
+		<ol>
+			<li>1st Car in India to run on 100% Ethanol</li>
+			<li>Bajaj discover 100cc engine</li>
+			<li>Chassis: LightWeight carbon Fiber</li>
+			<li>The Compression Ratio was increased from 10 to 13</li>
+		</ol>
+		<img src="{% static 'ShellEcoImages/75.jpg' %}" />
+	</div>
+
+	<div class="footer">
+		<div class="cover">
+			<p>We at Team Eco Titans focus on designing, building and testing a highly energy efficient prototype vehicle. Excelling at the Shell Eco Marathon, Asia is our primary aim. We build a Super Mileage Vehicle that will define the next generation of energy efficient vehicles and will be adopted for mass production.</p>
+			<hr>
+			<h1>Copyright © 2018 ECO Titans. All Rights Reserved.</h1>
+			<a class="facebook" href="https://m.facebook.com/profile.php?id=228172260639135&ref=content_filter"><i class="fa fa-facebook"></i></a>
+			<a class="instagram" href="https://www.instagram.com/team_bits_shellecomarathon/"><i class="fa fa-instagram"></i></a>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		window.addEventListener("load", function()
+		{
+			var load_screen = document.getElementsByClassName("loaderScreen")[0];
+			document.body.removeChild(load_screen);
+		});
+		
+		function openNav() {
+		    document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+		    document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+
+</body>
+</html>

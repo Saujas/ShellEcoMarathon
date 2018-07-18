@@ -1,0 +1,851 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+.loaderScreen
+{
+	background-color: rgba(0,100,120,1);
+	width: 100vw;
+	height: 100vh;
+}
+
+.loaderScreen > .loader
+{
+	width: 100px;
+	height: 100px;
+	border: 4px solid white;
+	border-radius: 50%;
+	background-color: transparent;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.loaderScreen > .loader > .dot
+{
+	position: relative;
+	top: 1vh;
+	left: 50%;
+	width: 5px;
+	height: 5px;
+	background: white;
+	border-radius: 50%;
+	transform-origin: 0 45px;
+	transform: rotate(0deg);
+	animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate
+{
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.head
+{
+	width: 100vw;
+	height: 11vh;
+	background: transparent;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow-y: hidden;
+}
+
+.head > span
+{
+	opacity: 0;
+}
+
+#mySidenav
+{
+	opacity: 0;
+}
+
+.head > img
+{
+	display: inline-block;
+	width: auto;
+	position: relative;
+	top: 0vh;
+	color: black;
+	width: 21vw;
+}
+
+.head > a
+{
+	position: relative;
+	left: 40vw;
+	top: -5vh;
+	margin-right: 1.5%;
+	color: black;
+	text-decoration: none;
+	font-family: 'Oswald', sans-serif;
+}
+
+.head > a:nth-child(4)
+{
+	color: orange;
+}
+
+.head > a:hover
+{
+	color: orange;
+}
+
+.head > .line
+{
+	width: 5vw;
+	background: orange;
+	height: 0.5vh;
+	position: relative;
+	top: -4vh;
+	left: 70vw;
+}
+
+.titans
+{
+	position: absolute;
+	top: 11vh;
+	width: 100vw;
+	height: 40vh;
+	background-image: url('ShellEcoImages/71.png');
+	overflow-y: hidden;
+}
+
+.titans > .colorBlack
+{
+	width: 100vw;
+	height: 40vh;
+	background: rgba(0,0,0,0.5);
+}
+
+.titans > .colorBlack > h1
+{
+	position: relative;
+	top: 15vh;
+	text-align: center;
+	color: white;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 40px;
+}
+
+.eklavya
+{
+	position: absolute;
+	top: 51vh;
+	height: 100vh;
+	width: 100vw;
+	background: rgb(120,120,120);
+	overflow-y: hidden;
+	background: rgb(240,240,240);
+}
+
+.eklavya > h1
+{
+	position: relative;
+	top: 15vh;
+	left: 10vw;
+	font-size: 40px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.eklavya > h3
+{
+	position: relative;
+	top: 20vh;
+	left: 12vw;
+	font-size: 35px;
+	font-family: 'Lato', sans-serif;
+}
+
+.eklavya > ol
+{
+	position: relative;
+	top: 0vh;
+	left: 12vw;
+	line-height: 45px;
+	font-size: 25px;
+	font-family: 'Lato', sans-serif;
+	width: 40vw;
+	display: inline-block;
+}
+
+.eklavya > img
+{
+	position: relative;
+	top: 20vh;
+	left: 15vw;
+	width: 40vw;
+	display: inline-block;
+}
+
+.vortex
+{
+	position: absolute;
+	top: 151vh;
+	height: 100vh;
+	width: 100vw;
+	background: #eee;
+}
+
+.vortex > h3
+{
+	position: relative;
+	top: 20vh;
+	left: 12vw;
+	font-size: 35px;
+	font-family: 'Lato', sans-serif;
+}
+
+.vortex > ol
+{
+	position: relative;
+	top: 0vh;
+	left: 12vw;
+	line-height: 45px;
+	font-size: 25px;
+	font-family: 'Lato', sans-serif;
+	width: 40vw;
+	display: inline-block;
+}
+
+.vortex > img
+{
+	position: relative;
+	top: 20vh;
+	left: 15vw;
+	width: 40vw;
+	display: inline-block;
+}
+
+.myriad
+{
+	position: absolute;
+	top: 251vh;
+	height: 100vh;
+	width: 100vw;
+	background: #eee;
+}
+
+.myriad > h3
+{
+	position: relative;
+	top: 20vh;
+	left: 12vw;
+	font-size: 35px;
+	font-family: 'Lato', sans-serif;
+}
+
+.myriad > ol
+{
+	position: relative;
+	top: -10vh;
+	left: 12vw;
+	line-height: 45px;
+	font-size: 25px;
+	font-family: 'Lato', sans-serif;
+	width: 40vw;
+	display: inline-block;
+}
+
+.myriad > img
+{
+	position: relative;
+	top: 10vh;
+	left: 15vw;
+	width: 40vw;
+	height: 80vh;
+	display: inline-block;
+}
+
+.tapas
+{
+	position: absolute;
+	top: 351vh;
+	height: 100vh;
+	width: 100vw;
+	background: #eee;
+}
+
+.tapas > h3
+{
+	position: relative;
+	top: 20vh;
+	left: 12vw;
+	font-size: 35px;
+	font-family: 'Lato', sans-serif;
+}
+
+.tapas > ol
+{
+	position: relative;
+	top: -10vh;
+	left: 12vw;
+	line-height: 45px;
+	font-size: 25px;
+	font-family: 'Lato', sans-serif;
+	width: 40vw;
+	display: inline-block;
+}
+
+.tapas > img
+{
+	position: relative;
+	top: 10vh;
+	left: 15vw;
+	width: 40vw;
+	height: 80vh;
+	display: inline-block;
+}
+
+.daksh
+{
+	position: absolute;
+	top: 451vh;
+	height: 100vh;
+	width: 100vw;
+	background: #eee;
+}
+
+.daksh > h3
+{
+	position: relative;
+	top: 20vh;
+	left: 12vw;
+	font-size: 35px;
+	font-family: 'Lato', sans-serif;
+}
+
+.daksh > ol
+{
+	position: relative;
+	top: -10vh;
+	left: 12vw;
+	line-height: 45px;
+	font-size: 24px;
+	font-family: 'Lato', sans-serif;
+	width: 40vw;
+	display: inline-block;
+}
+
+.daksh > img
+{
+	position: relative;
+	top: 10vh;
+	left: 15vw;
+	width: 40vw;
+	height: 80vh;
+	display: inline-block;
+}
+
+.footer
+{
+	position: absolute;
+	top: 551vh;
+	height: 50vh;
+	width: 100vw;
+	overflow-y: hidden;
+}
+
+.footer:after
+{
+	content: "";
+	background-image: url('ShellEcoImages/72.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.7;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+.footer > .cover
+{
+	width: 100vw;
+	height: 140vh;
+	background: rgba(0,0,0,0.5);
+}
+
+.footer > .cover > img
+{
+	position: relative;
+	top: 9vh;
+	left: 10vw;
+}
+
+.footer > .cover > p
+{
+	position: relative;
+	top: 12vh;
+	left: 10vw;
+	width: 80vw;
+	height: auto;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: white;
+}
+
+.footer > .cover > hr
+{
+	position: relative;
+	top: 15vh;
+	left: 5vw;
+	width: 90vw;
+	text-align: center;
+}
+
+.footer > .cover > h1
+{
+	position: relative;
+	top: 18vh;
+	left: 10vw;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: white;
+	font-size: 20px;
+}
+
+.footer > .cover > .facebook
+{
+	position: relative;
+	top: 25vh;
+	left: 45vw;
+	color: white;
+	font-size: 35px;
+}
+
+.footer > .cover > .instagram
+{
+	position: relative;
+	top: 25vh;
+	left: 48vw;
+	color: white;
+	font-size: 35px;
+}
+
+@media screen and (max-width: 1050px)
+{
+	.headCopy
+	{
+		display: none;
+	}
+
+	.head > a
+	{
+		position: relative;
+		left: 5vw;
+		font-size: 20px;
+	}
+
+	.head > .line
+	{
+		display: none;
+	}
+
+	.head > img
+	{
+		width: 40vw;
+	}
+
+	.titans
+	{
+		position: absolute;
+		top: 7.8vh;
+		height: 50vh;
+		background-image: url('ShellEcoImages/71.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	.titans > .colorBlack
+	{
+		height: 50vh;
+	}
+
+	.eklavya > ol
+	{
+		position: relative;
+		top: 20vh;
+	}
+
+	.eklavya > img
+	{
+		position: relative;
+		top: 25vh;
+		left: 10vw;
+		width: 80vw;
+	}
+
+	.vortex > ol
+	{
+		position: relative;
+		top: 20vh;
+	}
+
+	.vortex > img
+	{
+		position: relative;
+		top: 25vh;
+		left: 10vw;
+		width: 80vw;
+	}
+
+	.myriad
+	{
+		overflow-y: hidden;
+	}
+
+	.myriad > ol
+	{
+		position: relative;
+		top: 25vh;
+	}
+
+	.myriad > img
+	{
+		position: relative;
+		top: 30vh;
+		left: 10vw;
+		width: 80vw;
+		height: 60vh;
+	}
+
+	.tapas
+	{
+		overflow-y: hidden;
+	}
+
+	.tapas > ol
+	{
+		position: relative;
+		top: 25vh;
+	}
+
+	.tapas > img
+	{
+		position: relative;
+		top: 35vh;
+		left: 10vw;
+		width: 80vw;
+		height: 60vh;
+	}
+
+	.daksh
+	{
+		height: 140vh;
+	}
+
+	.daksh > ol
+	{
+		position: relative;
+		top: 25vh;
+	}
+
+	.daksh > img
+	{
+		position: relative;
+		top: 35vh;
+		left: 10vw;
+		width: 80vw;
+		height: 60vh;
+	}
+
+	.footer
+	{
+		position: absolute;
+		top: 590vh;
+	}
+}
+
+@media screen and (max-width: 800px)
+{
+	.head > a
+	{
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 450px)
+{
+	.head > a
+	{
+		display: none;
+	}
+
+	.head > span
+	{
+		opacity: 1;
+		position: absolute;
+		right: 2vw;
+		top: 0;
+		font-size: 30px;
+	}
+
+	#mySidenav
+	{
+		opacity: 1;
+		z-index: 11;
+	}
+
+	.sidenav {
+	    height: 100%;
+	    width: 0;
+	    position: fixed;
+	    z-index: 1;
+	    top: 0;
+	    left: 0;
+	    background-color: #111;
+	    overflow-x: hidden;
+	    transition: 0.5s;
+	    padding-top: 60px;
+	}
+
+	.sidenav a {
+	    padding: 8px 8px 8px 32px;
+	    text-decoration: none;
+	    font-size: 25px;
+	    color: #818181;
+	    display: block;
+	    transition: 0.3s;
+	    overflow-x: show;
+	}
+
+	.sidenav a:hover {
+	    color: #f1f1f1;
+	}
+
+	.sidenav .closebtn {
+	    position: absolute;
+	    top: 0;
+	    right: 25px;
+	    font-size: 36px;
+	    margin-left: 50px;
+	}
+
+	.titans
+	{
+		position: absolute;
+		top: 6vh;
+	}
+
+	.eklavya
+	{
+		position: absolute;
+		top: 45vh;
+		height: 90vh;
+	}
+
+	.eklavya > h1
+	{
+		font-size: 23px;
+	}
+
+	.eklavya > h3
+	{
+		font-size: 20px;
+	}
+
+	.eklavya > ol
+	{
+		line-height: 25px;
+		font-size: 15px;
+	}
+
+	.vortex
+	{
+		position: absolute;
+		top: 135vh;
+		height: 90vh;
+	}
+
+	.vortex > h1
+	{
+		font-size: 23px;
+	}
+
+	.vortex > h3
+	{
+		font-size: 20px;
+	}
+
+	.vortex > ol
+	{
+		line-height: 25px;
+		font-size: 15px;
+	}
+
+	.myriad
+	{
+		position: absolute;
+		top: 225vh;
+	}
+
+	.myriad > h1
+	{
+		font-size: 23px;
+	}
+
+	.myriad > h3
+	{
+		font-size: 20px;
+	}
+
+	.myriad > ol
+	{
+		line-height: 25px;
+		font-size: 15px;
+	}
+
+	.tapas
+	{
+		position: absolute;
+		top: 325vh;
+	}
+
+	.tapas > h1
+	{
+		font-size: 23px;
+	}
+
+	.tapas > h3
+	{
+		font-size: 20px;
+	}
+
+	.tapas > ol
+	{
+		line-height: 25px;
+		font-size: 15px;
+	}
+
+	.daksh
+	{
+		position: absolute;
+		top: 425vh;
+		height: 120vh;
+	}
+
+	.daksh > h1
+	{
+		font-size: 23px;
+	}
+
+	.daksh > h3
+	{
+		font-size: 20px;
+	}
+
+	.daksh > ol
+	{
+		line-height: 25px;
+		font-size: 15px;
+		width: 80vw;
+	}
+
+	.footer
+	{
+		position: absolute;
+		top: 545vh;
+		height: 60vh;
+	}
+
+	.footer > .cover > h1
+	{
+		position: relative;
+		left: 2vw;
+	}
+}
+
+@media screen and (max-width: 376px)
+{
+	.eklavya > h1
+	{
+		font-size: 21px;
+		position: relative;
+		left: 2vw;
+	}
+
+	.titans
+	{
+		position: absolute;
+		top: 5vh;
+	}
+
+	.tapas
+	{
+		height: 110vh;
+	}
+
+	.daksh
+	{
+		overflow-y: hidden;
+		position: absolute;
+		top: 435vh;
+		height: 125vh;
+	}
+
+	.footer
+	{
+		height: 70vh;
+		position: absolute;
+		top: 560vh;
+	}
+
+	.footer > .cover > h1
+	{
+		font-size: 15px;
+	}
+
+	.footer > .cover > p
+	{
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 370px)
+{
+	.eklavya > h1
+	{
+		font-size: 21px;
+		position: relative;
+		left: 2vw;
+	}
+
+	.tapas
+	{
+		height: 110vh;
+	}
+
+	.daksh
+	{
+		overflow-y: hidden;
+		position: absolute;
+		top: 435vh;
+		height: 125vh;
+	}
+
+	.footer
+	{
+		height: 70vh;
+		position: absolute;
+		top: 560vh;
+	}
+
+	.footer > .cover > h1
+	{
+		font-size: 15px;
+	}
+
+	.footer > .cover > p
+	{
+		font-size: 15px;
+	}
+}
