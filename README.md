@@ -20,7 +20,7 @@ Download repo and extract from zipped file
 
 To run server:
 ```shell
-cd ShellEcoMarathon-master/ShellEcoMarathon-master/ShellEco
+cd ShellEcoMarathon-master/ShellEco
 
 python3 manage.py runserver
 ```
